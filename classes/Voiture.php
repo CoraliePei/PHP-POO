@@ -8,7 +8,17 @@
 class Voiture extends Vehicule
 {
     public int $nbrRoues = 4; // Valeur par défaut
+    private string $typeCarrosserie;
 
+    public function getTypeCarrosserie(): string
+    {
+        return $this->typeCarrosserie;
+    }
+
+    public function setTypeCarrosserie(string $typeCarrosserie): void
+    {
+        $this->typeCarrosserie = $typeCarrosserie;
+    }
 
 
     // public function __construct(string $couleur)

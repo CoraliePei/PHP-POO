@@ -7,13 +7,20 @@ spl_autoload_register(function ($className) {
 
 $voiture1 = new Voiture();
 $voiture1->setMarque("BMW");
+$voiture1->setVitesse(50);
+$voiture1->setMasse(1200);
+echo $voiture1->calculerEnergieCinetique() . ' Joules <br>';
+$voiture1->setVitesse(60);
+echo $voiture1->calculerEnergieCinetique() . ' Joules <br>';
 
 echo '<pre>';
 var_dump($voiture1);
 echo '<hr>';
 
-$vehicule = new Vehicule();
-var_dump($vehicule);
+// $vehicule = new Vehicule();
+// var_dump($vehicule);
+
+
 
 
 // $voiture1->couleur = "rouge";

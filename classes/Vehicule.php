@@ -2,7 +2,7 @@
 
 // protected : les classes qui en hériteront pourront lire la propriété, contrairement au private qui ne peut être lu dans aucun des deux
 
-class Vehicule
+abstract class Vehicule
 {
     protected int $masse;
     protected float $vitesse; // utiliser le système métrique international
