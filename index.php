@@ -5,6 +5,10 @@ spl_autoload_register(function ($className) {
     require_once './classes/' . $className . '.php';
 });
 
+
+$voitureBerline = new Berline();
+var_dump($voitureBerline);
+
 $voiture1 = new Voiture();
 $voiture1->setMarque("BMW");
 $voiture1->setVitesse(50);
