@@ -13,6 +13,18 @@ class Voiture
 
     // **** Méthodes ****
 
+
+
+    public function demarrer()
+    {
+        echo "<p>La voiture démarre</p>";
+    }
+
+    public function afficherCouleur(): string
+    {
+        return "<p>La voiture est de couleur $this->couleur </p>";
+    }
+
     // Récupérer la marque de la voiture private
     public function getMarque(): string
     {
@@ -30,19 +42,18 @@ class Voiture
         return $this->couleur;
     }
 
-    // Définir la marque de la voiture private
     public function setColor($color): void
     {
         $this->couleur = $color;
     }
 
-    public function demarrer()
+    public function __construct(string $couleur)
     {
-        echo "<p>La voiture démarre</p>";
+        $this->couleur = $couleur;
     }
 
-    public function afficherCouleur(): string
+    public function __destruct()
     {
-        return "<p>La voiture est de couleur $this->couleur </p>";
+        echo "Destroyed!";
     }
 }
