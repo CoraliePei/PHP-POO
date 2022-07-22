@@ -4,16 +4,17 @@
 
 // Encapsulation : public, protected, private
 
-class Voiture
+// extends : est associé à la fonction qui load auto le fichier, permet de relier les deux
+class Voiture extends Vehicule
 {
-    // **** Propriétés ****
-    private string $marque;
-    private string $couleur;
     public int $nbrRoues = 4; // Valeur par défaut
 
-    // **** Méthodes ****
 
 
+    // public function __construct(string $couleur)
+    // {
+    //     $this->couleur = $couleur;
+    // }
 
     public function demarrer()
     {
@@ -25,35 +26,8 @@ class Voiture
         return "<p>La voiture est de couleur $this->couleur </p>";
     }
 
-    // Récupérer la marque de la voiture private
-    public function getMarque(): string
-    {
-        return $this->marque;
-    }
-
-    // Définir la marque de la voiture private
-    public function setMarque($marque): void
-    {
-        $this->marque = $marque;
-    }
-
-    public function getColor(): string
-    {
-        return $this->couleur;
-    }
-
-    public function setColor($color): void
-    {
-        $this->couleur = $color;
-    }
-
-    public function __construct(string $couleur)
-    {
-        $this->couleur = $couleur;
-    }
-
-    public function __destruct()
-    {
-        echo "Destroyed!";
-    }
+    // public function __destruct()
+    // {
+    //     echo "Destroyed!";
+    // }
 }
