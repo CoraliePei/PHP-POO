@@ -1,6 +1,6 @@
 <?php
 
-class Berline extends Voiture
+final class Berline extends Voiture
 {
     private $nbrPortes = 5;
 
